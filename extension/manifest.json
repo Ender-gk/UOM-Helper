@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "UOM 视频培训助手 v1.2",
+  "version": "1.2.0",
+  "version_name": "v1.2",
+  "description": "双模式培训辅助、双模型验证码识别、任务隔离与稳定调度",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://uom.caac.gov.cn/*",
+    "http://127.0.0.1:8899/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["https://uom.caac.gov.cn/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://uom.caac.gov.cn/*"],
+      "js": ["content_bridge.js", "injector.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "UOM 视频培训助手"
+  }
+}
