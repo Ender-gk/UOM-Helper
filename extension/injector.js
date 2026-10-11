@@ -1,0 +1,1 @@
+!function(){const e=document.createElement("script");e.src=chrome.runtime.getURL("content.js"),e.onload=()=>e.remove(),e.onerror=()=>{e.remove(),console.error("[UOM] \u9875\u9762\u811a\u672c\u6ce8\u5165\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u7f51\u7ad9 CSP \u6216\u5237\u65b0\u6269\u5c55")},(document.head||document.documentElement).appendChild(e)}();

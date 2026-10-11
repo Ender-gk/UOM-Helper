@@ -1,0 +1,33 @@
+name: 故障反馈
+description: 报告安装或使用问题
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "只提供不含私人数据的故障描述，不要附带账号信息、Cookie 或完整网页。"
+  - type: input
+    id: version
+    attributes:
+      label: 插件版本
+      placeholder: v1.4
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、浏览器版本与 Python 版本
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 实际行为与期望行为
+    validations:
+      required: true
